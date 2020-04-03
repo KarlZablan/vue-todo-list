@@ -1,5 +1,7 @@
 const state= {
-    todos: []
+    todos: [
+  
+    ]
 }
 
 const getters={
@@ -14,7 +16,7 @@ const mutations={
         state.todos.push(todo);
      },
      update(state, todo){
-        state.todos = state.todos.map(x=> x.id === todo.id ? {...x, details: todo.details} : x);
+        state.todos = state.todos.map(x=> x.id === todo.id ? {...x, details: todo.details , isFinished: todo.isFinished} : x);
      },
      delete(state,todo){
         state.todos.splice(state.todos.indexOf(todo), 1);
